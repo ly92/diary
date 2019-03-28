@@ -17,7 +17,7 @@ class Controller extends BaseController
         //这一步很关键
         system('sudo unset GIT_DIR');
         system('sudo git pull');
-        return 'Hello ly !';
+        return 'Hello lllllly !';
 	}
 
 }
