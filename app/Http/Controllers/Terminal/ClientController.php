@@ -19,7 +19,7 @@ class ClientController extends BaseController{
 			'nickname' => 'required',
 			'passwd' => 'required',
 		]);
-		$mobile = $request->input('mobile');
+		$mobile = $request->post('mobile');
 		$nickname = $request->input('nickname');
 		$passwd = $request->input('passwd');
 
