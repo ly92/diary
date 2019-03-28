@@ -10,7 +10,7 @@ class Controller extends BaseController
 
 	public function hook(){
 		//查看当前账户，我服务器用的是nginx，所以这里返回的用户是‘nginx’
-        // system('whoami');
+        system('whoami');
 
         //重定位
         system('sudo cd /home/diary');
