@@ -14,7 +14,6 @@ class ClientController extends BaseController{
 
 	//注册
 	public function add(Request $request){
-		system('whoami');
 		$this->validatorRequest($request->all(), [
 			'mobile' => 'required',
 			'nickname' => 'required',
@@ -29,7 +28,7 @@ class ClientController extends BaseController{
 
 	//登录
 	public function login(){
-
+		return 'login';
 	}
 
 	//重置密码
