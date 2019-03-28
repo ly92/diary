@@ -15,4 +15,4 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->post('hook', ['uses' => 'Controller@hook']);
+$router->get('hook', ['uses' => 'Controller@hook']);
