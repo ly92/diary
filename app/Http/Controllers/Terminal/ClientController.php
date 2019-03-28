@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Terminal;
 
+use Laravel\Lumen\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 
 class ClientController extends BaseController{
