@@ -23,7 +23,7 @@ class ClientController extends BaseController{
 		$nickname = $request->input('nickname');
 		$passwd = $request->input('passwd');
 
-		return $mobile.$nickname.$passwd;
+		return '111'.$mobile.$nickname.$passwd;
 	}
 
 	//登录
