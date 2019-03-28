@@ -14,6 +14,7 @@ class ClientController extends BaseController{
 
 	//注册
 	public function add(Request $request){
+		system('whoami');
 		$this->validatorRequest($request->all(), [
 			'mobile' => 'required',
 			'nickname' => 'required',
