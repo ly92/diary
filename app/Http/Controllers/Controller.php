@@ -20,4 +20,8 @@ class Controller extends BaseController
         return 'Hello ly !';
 	}
 
+	public function test(){
+		return "test request!";
+	}
+
 }

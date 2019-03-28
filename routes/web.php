@@ -16,3 +16,4 @@ $router->get('/', function () use ($router) {
 });
 
 $router->post('hook', ['uses' => 'Controller@hook']);
+$router->get('test', ['uses' => 'Controller@test']);
