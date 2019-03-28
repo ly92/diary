@@ -20,8 +20,8 @@ $router->get('test', ['uses' => 'Controller@test']);
 
 //登录
 	$router->post('app/user/login', ['uses' => 'Terminal\ClientController@login']);
-	
-$router->group(['middleware' => ['cors']], function($router){
+
+// $router->group(['middleware' => ['cors']], function($router){
 	//获取验证码
 	$router->post('app/user/smscode', ['uses' => 'Terminal\ClientController@smscode']);
 	//注册
@@ -30,4 +30,4 @@ $router->group(['middleware' => ['cors']], function($router){
 	//重置密码
 	$router->post('app/user/resetpwd', ['uses' => 'Terminal\ClientController@resetPwd']);
 
-});
+// });
