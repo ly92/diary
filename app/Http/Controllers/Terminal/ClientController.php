@@ -15,11 +15,11 @@ class ClientController extends BaseController{
 
 	//注册
 	public function add(Request $request){
-		$this->validatorRequest($request->all(), [
-			'mobile' => 'required',
-			'nickname' => 'required',
-			'passwd' => 'required',
-		]);
+		// $this->validatorRequest($request->all(), [
+		// 	'mobile' => 'required',
+		// 	'nickname' => 'required',
+		// 	'passwd' => 'required',
+		// ]);
 		$mobile = $request->post('mobile');
 		$nickname = $request->input('nickname');
 		$passwd = $request->input('passwd');
