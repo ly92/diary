@@ -1,6 +1,6 @@
 <?php 
 
-namespace App\Http\Controller\Terminal;
+namespace App\Http\Controllers\Terminal;
 
 use Illuminate\Http\Request;
 
