@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Terminal;
 
-use Laravel\Lumen\Routing\Controller as BaseController;
+use App\Http\Controllers\IController;
 use Illuminate\Http\Request;
 
-class ClientController extends BaseController{
+class ClientController extends IController {
 
 
 	//获取验证码
@@ -15,11 +15,11 @@ class ClientController extends BaseController{
 
 	//注册
 	public function add(Request $request){
-		// $this->validatorRequest($request->all(), [
-		// 	'mobile' => 'required',
-		// 	'nickname' => 'required',
-		// 	'passwd' => 'required',
-		// ]);
+		 $this->validatorRequest($request->all(), [
+		 	'mobile' => 'required',
+		 	'nickname' => 'required',
+		 	'passwd' => 'required',
+		 ]);
 		$mobile = $request->input('mobile');
 		$nickname = $request->input('nickname');
 		$passwd = $request->input('passwd');
