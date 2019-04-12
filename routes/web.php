@@ -30,3 +30,7 @@ $router->group(['middleware' => ['cors']], function($router){
 	$router->post('app/user/login', ['uses' => 'Terminal\ClientController@login']);
 
 });
+
+$router->group(['middleware' => ['cors', 'auth']], function ($router){
+
+});

@@ -35,9 +35,24 @@ class Authenticate
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if ($this->auth->guard($guard)->guest()) {
-            return response('Unauthorized.', 401);
+        $cid = $request->input('cid');
+        $ts = $request->input('ts');
+        $cmdno = $request->input('cmdno');
+        $sign = $request->input('sign');
+
+        if (!$cid || !$sign){
+            throw new \Exception('获取鉴权参数失败！', 1227);
         }
+        if (!$cmdno){
+            throw new \Exception('缺少请求流水参数！', 1229);
+        }
+
+        //是否为正式环境
+
+        //时间是否过期
+
+        //
+
 
         return $next($request);
     }

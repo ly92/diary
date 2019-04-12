@@ -9,9 +9,10 @@
 namespace App\Http\Controllers;
 
 
-use Dotenv\Validator;
 
-class IController extends BaseController
+use Illuminate\Support\Facades\Validator;
+
+class IController extends Controller
 {
     public function __construct()
     {
@@ -31,11 +32,11 @@ class IController extends BaseController
     public $validateReturnString = true;
 
     /**
-     *
      * @param array $validator
      * @param array $rules
      * @param array $customAttributes
      * @param array $messages
+     * @return array|string
      */
     protected function validatorHandle(array $validator, array $rules, array $customAttributes = [], array $messages = []){
         $messages = $messages ? $messages : $this->validateMessage;
@@ -123,8 +124,8 @@ class IController extends BaseController
     }
 
     public function response(){
-        app('log')->info('REQUEST' . app('request')->getPathInfo() . '(' . json_encode(app('request')->all()). ') =============>' . json_encode($this->getMessage()));
-        return $this->response()->json($this->getMessage());
+        app('log')->info(' [REQUEST] ' . app('request')->getPathInfo() . '(' . json_encode(app('request')->all()). ') =============>' . json_encode($this->getMessage()));
+        return response()->json($this->getMessage());
     }
 
     public function getErrFromException(\Exception $e){
