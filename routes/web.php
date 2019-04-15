@@ -29,8 +29,40 @@ $router->group(['middleware' => ['cors']], function($router){
 	//登录
 	$router->post('app/user/login', ['uses' => 'Terminal\ClientController@login']);
 
+    //动态列表
+    $router->post('app/user/dynamic', []);
+    //动态详情
+
+    //动态分类
+
 });
 
 $router->group(['middleware' => ['cors', 'auth']], function ($router){
+    //个人信息修改
+
+    //上传头像
+
+    //获取个人信息
+
+    //我喜欢的
+
+    //已有分类
+
+    //新增分类
+
+    //编辑分类
+
+    //已有日记
+
+    //新增日记
+
+    //编辑日记
+
+    //设置喜欢
+
+    //评论动态
+
+    //跟评（追加别人的评论）
+
 
 });
